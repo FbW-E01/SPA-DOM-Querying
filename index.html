@@ -108,14 +108,18 @@
             e.style.marginTop = "30px";
         });
     }
+    const footerStyle = {
+        "width": "6em",
+        "height": "6em",
+        "border": "4px solid orange",
+        "border-radius": "50%",
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+    };
+
     footerItems.forEach(e => {
-        e.style.width = "6em";
-        e.style.height = "6em";
-        e.style.border = "4px solid orange";
-        e.style.borderRadius = "50%";
-        e.style.display = "flex";
-        e.style.justifyContent = "center";
-        e.style.alignItems = "center";
+        Object.assign(e.style, footerStyle);
     })
 </script>
 </html>
