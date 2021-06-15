@@ -2,7 +2,7 @@ const targetBody = document.querySelector("body");
 targetBody.style.fontFamily = "Impact,Charcoal,sans-serif";
 targetBody.style.display = "flex";
 targetBody.style.flexFlow = "row wrap";
-targetBody.style.justifyContent = "space-around";
+targetBody.style.justifyContent = "center";
 targetBody.style.boxSizing = "border-box";
 
 const targetH1 = document.querySelector(".title");
@@ -44,6 +44,7 @@ changeAllergyWarnings.style.fontSize = "26px";
 const changerAllergyInfo = document.querySelectorAll(".allergy-info");
 changerAllergyInfo.forEach((e, i) => {
   if (i % 2 === 1) {
+    e.style.fontFamily = "Lucida Console,Courier New,monospace";
     e.style.backgroundColor = "lightgreen";
     e.style.textAlign = "center";
     e.style.display = "block";
@@ -52,11 +53,11 @@ changerAllergyInfo.forEach((e, i) => {
 
 const changerFooter = document.querySelectorAll(".food-desc");
 changerFooter.forEach((e) => {
+  e.style.boxSizing = "border-box";
+  e.style.display = "flex";
+  e.style.flexWrap = "wrap";
+  e.style.justifyContent = "center";
   e.style.border = "1px solid red";
   e.style.borderRadius = "15px";
   e.style.backgroundColor = "pink";
-  e.style.textAlign = "center";
-  e.style.display = "flex";
-  e.style.flexFlow = "row wrap";
-  e.style.boxSizing = "border-box";
 });
