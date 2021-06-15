@@ -57,5 +57,66 @@
         </section>
     </footer>
 </body>
-
+<script>
+    document.querySelector('body').style.fontFamily = "'Times New Roman', Times, serif";
+    document.querySelector('h1').style.textAlign = "center";
+    const category = document.querySelectorAll('.category');
+    category.forEach(e => {
+        e.style.color = "blue";
+        e.style.fontStyle = "italic";
+    });
+    const colorGenerator = () => `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${Math.random()})`;
+    const uList = document.querySelectorAll("ul.food-category");
+    uList.forEach(e => e.style.backgroundColor = colorGenerator());
+    const foodCategory = document.querySelectorAll(".food-category");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    if (mediaQuery.matches) {
+        document.querySelector("main").style.display = "flex";
+        document.querySelector("main").style.justifyContent = "space-around";
+        foodCategory.forEach(e => e.style.flexBasis = "25%");
+    } else {
+        document.querySelector("main").style.display = "block";
+    }
+    const warning = document.getElementById("warning");
+    warning.style.fontSize = "1.3rem";
+    warning.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+    warning.style.textAlign = "center";
+    const allergyInfo = document.querySelectorAll(".allergy-info");
+    allergyInfo.forEach((e, i) => {
+        e.style.listStyle = "none"
+        if(i % 2 === 0) {
+            e.style.backgroundColor = "white";
+        } else {
+            e.style.backgroundColor = "skyblue";
+        }
+    })
+    const allergyWarning = document.querySelector(".allergy-warning");
+    allergyWarning.style.display = "flex";
+    allergyWarning.style.flexDirection = "column";
+    allergyWarning.style.width = "60%";
+    allergyWarning.style.margin = "auto";
+    const footer = document.querySelector("footer");
+    footer.style.display = "flex";
+    footer.style.justifyContent = "space-around";
+    const footerItems = document.querySelectorAll(".food-desc");
+    if (mediaQuery.matches) {
+        footer.style.flexDirection = "row";
+    } else {
+        footer.style.flexDirection = "column";
+        footer.style.alignItems = "center";
+        footerItems.forEach(e => {
+            e.style.marginTop = "30px";
+    })
+        
+    }
+    footerItems.forEach(e => {
+        e.style.width = "6em";
+        e.style.height = "6em";
+        e.style.border = "4px solid orange";
+        e.style.borderRadius = "50%";
+        e.style.display = "flex";
+        e.style.justifyContent = "center";
+        e.style.alignItems = "center";
+    })
+</script>
 </html>
