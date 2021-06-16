@@ -51,14 +51,14 @@ foodDesc.forEach(foodD => foodD.style.borderRadius = "15px");
 foodDesc.forEach(foodD => foodD.style.padding = "10px");
 const footer = document.querySelector("footer");
 footer.style.display = "flex";
-// found this here: https://blog.hellojs.org/re-create-css-flexbox-media-queries-with-javascript-c192e4e16a63
-// doesn't work though
-// let winWidth = $( window ).width();
-// if (winWidth <= 411) {
-//     footer.display.flexDirection = "column";
-// } else if (winWidth > 411) {
-//     footer.display.flexDirection = "row";
-// }
+// copied this from André (to make it responsive)
+// doesn't display column for mobile though
+const mediaQuery = window.matchMedia("(min-width: 400px)");
+if (mediaQuery.matches) {
+    footer.style.display.flexDirection = "row";
+} else {
+    footer.style.display.flexDirection = "column";
+}
 footer.style.justifyContent = "space-around";
 footer.style.marginTop = "1rem";
 
