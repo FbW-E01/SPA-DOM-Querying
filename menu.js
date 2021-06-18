@@ -1,15 +1,18 @@
 // Change the font of the body element. 
-const body = document.querySelector("body");
+const body = document.body;
 body.style.fontFamily = "Impact,Charcoal,sans-serif";
-body.style.backgroundImage = "url(images/brooke-lark-08bOYnH_r_E-unsplash.jpg)";
+body.style.backgroundImage = "url(images/keith-misner-h0Vxgz5tyXA-unsplash.jpg)";
 body.style.backgroundSize = "cover";
 body.style.backgroundRepeat = "no-repeat";
 body.style.backgroundAttachment = "fixed";
 body.style.width = "80vw";
 body.style.margin = "auto";
+body.style.color = "white";
 
 // * Center the text of h1 on the page.
-document.querySelector("h1").style.textAlign = "center";
+const h1 = document.querySelector("h1");
+h1.style.textAlign = "center";
+h1.style.fontSize= "4em";
 
 // * The menu headings have a class named `category`. Select the elements by class name. Then, change the `color` and `font-style` of each element.
 const allLabels = document.querySelectorAll(".category");
@@ -70,22 +73,23 @@ const allergyWarning = document.querySelector(".allergy-warning");
 allergyWarning.style.display = "flex";
 allergyWarning.style.flexDirection = "column";
 allergyWarning.style.alignItems = "center";
+allergyWarning.style.marginBottom = "30px";
 
 
 // * The descriptions in the footer should also be styled, e.g. a rounded border with a background color. They should appear in a column for mobile and in a row for desktop.
 
 const footerElements = document.querySelectorAll(".food-desc");
-footerElements.forEach(element => element.style.border = "5px solid orange");
+footerElements.forEach(element => element.style.border = "5px solid white");
 footerElements.forEach(element => element.style.borderRadius = "50%");
-footerElements.forEach(element => element.style.width = "60px");
-footerElements.forEach(element => element.style.height = "60px");
+footerElements.forEach(element => element.style.width = "70px");
+footerElements.forEach(element => element.style.height = "70px");
 footerElements.forEach(element => element.style.textAlign = "center");
-footerElements.forEach(element => element.style.padding = "20px");
-footerElements.forEach(element => element.style.margin = "20px");
+footerElements.forEach(element => element.style.padding = "40px");
+footerElements.forEach(element => element.style.margin = "30px");
+footerElements.forEach(element => element.style.backgroundColor = "orange");
 
 const footer =document.querySelector(".footer");
 footer.style.display = "flex";
 footer.style.flexDirection = "row";
 footer.style.justifyContent = "center";
-
 
