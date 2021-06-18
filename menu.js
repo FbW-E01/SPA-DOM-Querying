@@ -82,7 +82,6 @@ const footerElements = document.querySelectorAll(".food-desc");
 footerElements.forEach(element => element.style.border = "5px solid white");
 footerElements.forEach(element => element.style.borderRadius = "50%");
 footerElements.forEach(element => element.style.width = "70px");
-footerElements.forEach(element => element.style.height = "70px");
 footerElements.forEach(element => element.style.textAlign = "center");
 footerElements.forEach(element => element.style.padding = "40px");
 footerElements.forEach(element => element.style.margin = "30px");
